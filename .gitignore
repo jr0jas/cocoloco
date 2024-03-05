@@ -1,0 +1,7 @@
+# Ignore the node_modules folder
+node_modules/
+
+# Ignore the package-lock.json file
+package-lock.json
+
+# Ignore bundle.js file inside dist folder
