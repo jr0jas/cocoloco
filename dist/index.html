@@ -1,13 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CocoLoco Soundscapes</title>
-  </head>
-  <body>
-    <h1 class="text-4">CocoLoco</h1>
-    <script src="bundle.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" integrity="sha512-L..." crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
+  <title>CocoLoco Soundscapes</title>
+</head>
+<body class="font-brand bg-brand-dark-primary text-white">
+  <!-- NAV -->
+  <nav class="relative container mx-auto px-4 md:px-0">
+    <!-- Flex Container For All Items -->
+    <div class="flex flex-wrap">
+      <!-- nav block 1 -->
+      <div class="flex flex-wrap items-center w-9/12 md:w-2/12">
+        <a href="/">
+          <img class="w-20 h-20 text-white" src="images/cocoloco.svg" alt="Coco Logo">
+        </a>
+      </div>
+      <!-- nav block 2 -->
+      <div class="hidden md:flex flex-wrap justify-end items-center w-8/12 pr-8">
+        <ul class="hidden md:flex space-x-8 ">
+          <li>
+            <a href="#" class="font-bold">Premium</a>
+          </li>
+          <li>
+            <a href="#" class="font-bold">Help</a>
+          </li>
+          <li>
+            <a href="#" class="font-bold">Download</a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav block 3 -->
+      <div class="flex flex-wrap items-center justify-end md:justify-start w-2/12">
+        <ul class="hidden md:flex space-x-8 ">
+          <li class="w-px h-4 bg-white my-auto mx-4" role=""separator></li>
+          <li>
+            <a href="#" class="font-bold">Sign Up</a>
+          </li>
+          <li>
+            <a href="#" class="font-bold">Sign In</a>
+          </li>
+        </ul>
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="block hamburger md:hidden focus:outline-none" type="button" aria-label="Open menu">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="menu" class="fixed hidden p-6 min-w-96 max-w-screen-xl h-full bg-black left-6 right-0 top-0 z-50">
+      <button id="close-mobile-menu-btn" class="flex fixed text-white text-2xl cursor-pointer focus:outline-none right-4 top-4" role="button" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="flex items-start flex-col w-full py-12 space-y-6 font-bold ">
+        <ul class="flex flex-col space-y-9">
+          <li>
+            <a href="#" class="leading-none font-bold text-3xl">Premium</a>
+          </li>
+          <li>
+            <a href="#" class="leading-none font-bold text-3xl">Help</a>
+          </li>
+          <li>
+            <a href="#" class="leading-none font-bold text-3xl">Download</a>
+          </li>
+        </ul>
+       <div class="bg-white w-6 h-px"></div>
+        <ul class="flex flex-col space-y-6">
+          <li>
+            <a href="#" class="font-normal text-lg leading-none text-brand-gray-secondary tracking-widest">Sign Up</a>
+          </li>
+          <li>
+            <a href="#" class="font-normal text-lg leading-none text-brand-gray-secondary tracking-widest">Sign In</a>
+          </li>
+        </ul>
+      </div>
+      <a href="/" class="fixed bottom-1">
+        <img class="w-20 h-20 text-white" src="images/cocoloco.svg" alt="Coco Logo">
+      </a>
+    </div>
+</nav>
+  <!-- SECTION HERO -->
+  <section class="hero-section px-4 md:px-0">
+    <div class="container mx-auto pt-16 md:pt-35 pb-14 md:pb-28">
+      <h1 class="w-3/5 md:w-2/5 text-left text-2xl lg:text-5xl leading-11 lg:leading-13 font-extrabold tracking-tighter">0.00 USD for 1 month of Premium</h1>
+      <h2 class="w-3/5 md:w-2/5 text-left font-normal text-base md:text-lg lg:text-xl md:leading-6 lg:leading-7 mt-4 md:mt-6 lg:mt-8">Return to Premium with 1 month of free ad-free, offline music.
+          <br>
+          Then, only 6.49 USD per month. Cancel anytime.
+      </h2>
+      <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-0 md:space-x-4 my-6 md:my-10">
+        <button class="text-black font-bold text-base bg-brand-pink border border-solid border-brand-pink py-2 px-4 w-full max-w-xs rounded-full shadow-md transform hover:scale-105 transition duration-300 ease-in-out focus:outline outline-2 outline-white outline-offset-2 ">
+          Reactivate Premium
+        </button>
+        <button class="text-white font-bold text-base bg-black border border-solid border-gray-600 py-2 px-4 w-full max-w-xs rounded-full shadow-md transform hover:scale-105 transition duration-300 ease-in-out focus:outline outline-2 outline-white outline-offset-2 ">
+          View All Plans
+        </button>
+      </div>
+      <div class="text-left pt-4 text-white text-xs leading-4 font-normal w-9/12 md:w-3/5">
+          <p class="">Offer to return for the Individual plan. Redeemable for users whose access to Premium ended more than 30 days ago and who have not used a return offer in the last 24 months. Then, it costs 6.49 USD per month. The offer ends on 1/4/24. <a href="#" class="underline cursor-pointer hover:font-bold hover:text-white">Terms and Conditions apply</a>.</p>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION BENEFITS-->
+  <section class="container mx-auto px-4 md:px-0">
+    <div class="mx-auto max-w-xl text-center">
+      <h2 class="font-bold text-center text-4xl mb-6">Feel the Difference</h2>
+      <h3 class="antialiased font-normal mt-2 lg:mt-5 text-base lg:text-xl">Upgrade to Premium and enjoy full control over what you listen to. Cancel anytime you want.</h3>
+      <div class="mt-6 mb-12 md:mb-24">
+        <table>
+          <thead>
+            <tr>
+              <th class="pt-4 px-2.5 border-b-white border-b border-b-solid text-left align-bottom text-white font-medium text-lg">What's Included</th>
+              <th class="py-4 px-2.5 bg-white text-black border-b-white border-b border-b-solid text-left align-middle font-medium text-lg">Spotify Free Plan</th>
+              <th class="py-4 px-2.5 text-left align-middle bg-[#ad2489] border-b-white border-b border-b-solid border-l-brand-dark-primary border-l-2 border-l-solid font-medium text-lg">Spotify Premium Plans</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="text-left max-w-40 py-4 px-2.5 border-b-white border-b border-b-solid"><span class="underline decoration-color-[#a7a7a7] decoration-dashed underline-offset-8 text-white font-normal tracking-wide leading-8 text-base">to your favorite music without ads</span></th>
+              <td class="py-4 px-2.5 border-b-white border-b border-b-solid">
+                <i class="fas fa-minus text-white text-2xl"></i>
+              </td>
+              <td class="py-4 px-2.5 bg-gradient-to-br from-[#AD2489] to-[#284675] border-b-white border-b border-b-solid border-l-brand-dark-primary border-l-2 border-l-solid">
+                <i class="fas fa-check text-white text-2xl"></i>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-left max-w-40 py-4 px-2.5 border-b-white border-b border-b-solid"><span class="underline decoration-color-[#a7a7a7] decoration-dashed underline-offset-8 text-white font-normal tracking-wide leading-8 text-base">Download songs to enjoy offline</span></th>
+              <td class="py-4 px-2.5 border-b-white border-b border-b-solid">
+                <i class="fas fa-minus text-white text-2xl"></i>
+              </td>
+              <td class="py-4 px-2.5 bg-gradient-to-br from-[#AD2489] to-[#284675] border-b-white border-b border-b-solid border-l-brand-dark-primary border-l-2 border-l-solid">
+                <i class="fas fa-check text-white text-2xl"></i>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-left max-w-40 py-4 px-2.5 border-b-white border-b border-b-solid"><span class="underline decoration-color-[#a7a7a7] decoration-dashed underline-offset-8 text-white font-normal tracking-wide leading-8 text-base">Listen to songs in any order</span></th>
+              <td class="py-4 px-2.5 border-b-white border-b border-b-solid">
+                <i class="fas fa-minus text-white text-2xl"></i>
+              </td>
+              <td class="py-4 px-2.5 bg-gradient-to-br from-[#AD2489] to-[#284675] border-b-white border-b border-b-solid border-l-brand-dark-primary border-l-2 border-l-solid">
+                <i class="fas fa-check text-white text-2xl"></i>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-left max-w-40 py-4 px-2.5 border-b-white border-b border-b-solid"><span class="underline decoration-color-[#a7a7a7] decoration-dashed underline-offset-8 text-white font-normal tracking-wide leading-8 text-base">High audio quality</span></th>
+              <td class="py-4 px-2.5 border-b-white border-b border-b-solid">
+                <i class="fas fa-minus text-white text-2xl"></i>
+              </td>
+              <td class="py-4 px-2.5 bg-gradient-to-br from-[#AD2489] to-[#284675] border-b-white border-b border-b-solid border-l-brand-dark-primary border-l-2 border-l-solid">
+                <i class="fas fa-check text-white text-2xl"></i>
+              </td>
+            </tr>
+            <tr class="border-b-white border-b border-b-solid">
+              <th class="text-left max-w-40 py-4 px-2.5 border-b-white border-b border-b-solid"></thclass><span class="underline decoration-color-[#a7a7a7] decoration-dashed underline-offset-8 text-white font-normal tracking-wide leading-8 text-base">Listen to what you want with your friends, in real time</span></th>
+              <td class="py-4 px-2.5 border-b-white border-b border-b-solid">
+                <i class="fas fa-minus text-white text-2xl"></i>
+              </td>
+              <td class="py-4 px-2.5 bg-gradient-to-br from-[#AD2489] to-[#284675] border-b-white border-b border-b-solid border-l-brand-dark-primary border-l-2 border-l-solid">
+                <i class="fas fa-check text-white text-2xl"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>        
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECTION INFO BOX -->
+  <section class="container mx-auto px-4 md:px-0">
+    <h2 class="text-white text-5xl font-bold tracking-tighter leading-none text-center mb-6 p-0;">
+      Affordable plans for any situation
+    </h2>
+    <p class="text-white text-base font-normal mb-9 mx-auto text-center">Choose a Premium plan and listen to music without ads and without limits on phones, speakers, and other devices. Pay in various ways. Cancel anytime.</p>
+    <div class="p-px bg-gradient-to-r from-purple-700 to-indigo-700 border-t-4 border-b-4 border-transparent border-l-4 border-purple-700 border-r-4 border-blue-700 rounded-lg">
+      <div class="py-6 pb-9 bg-brand-dark-primary rounded-lg">
+        <div class="flex flex-col max-w-md mx-auto">
+          <h3 class="text-white text-lg font-semibold my-4 text-left">All Premium plans include the following:</h3>
+          <ul class="list-disc pl-5">
+            <li class="flex items-center"><i class="fas fa-check mr-2"></i>Listen to your favorite music without ads</li>
+            <li class="flex items-center"><i class="fas fa-check mr-2"></i>Download songs to enjoy them offline</li>
+            <li class="flex items-center"><i class="fas fa-check mr-2"></i>Listen to songs in any order</li>
+            <li class="flex items-center"><i class="fas fa-check mr-2"></i>High audio quality</li>
+            <li class="flex items-center"><i class="fas fa-check mr-2"></i>Listen to whatever you want with your friends, in real time</li>
+            <li class="flex items-center"><i class="fas fa-check mr-2"></i>Organize your playlist queue</li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECTION CARDS -->
+  <section class="container mx-auto flex items-center justify-center min-h-screen px-4 md:px-0">
+    <div class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0" >
+      <!-- Card 1 -->
+      <div class="w-full max-w-md rounded-xl border-4 border-solid border-brand-pink p-4 m-0">
+        <div class="h-72">
+          <span class="flex w-fit px-2 py-2.5 mb-6 font-bold capitalize text-base leading-4 rounded-lg text-black bg-brand-pink">
+            Free for 1 Month
+          </span>
+          <div class="grid grid-cols-2">
+            <h3 class="font-bold text-xl leading-tight">Individual Premium</h3>
+            <div class="flex flex-col uppercase justify-center leading-6 text-right">
+              <p class="mt-1 font-bold text-lg">free</p>
+              <p class="m-0 font-normal text-xxs">For 1 month</p>
+            </div>
+          </div>
+          <ul class="list-disc px-4 mt-8 font-medium">
+            <li><p>1 premium account</p></li>
+            <li><p>Cancel anytime</p></li>
+          </ul>
+        </div>
+        <button class="text-black font-bold text-base bg-brand-pink py-4 w-full max-w-md rounded-full shadow-md transform hover:scale-105 transition duration-300 ease-in-out focus:outline outline-2 outline-white outline-offset-2 ">
+          Try for free for 2 months
+        </button>
+        <p class="text-center pt-4 text-white text-xs leading-4 font-normal">
+          Return offer for the Individual plan. Redeemable for users whose access to Premium ended more than 30 days ago and who have not used a return offer in the last 24 months. Afterwards, it costs 6.49 USD per month. The offer ends on 1/4/24. <a class="underline cursor-pointer hover:font-bold hover:text-white" href="#">Terms and conditions apply.</a>
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="w-full max-w-md rounded-xl border-4 border-solid border-brand-orange p-4 m-0">
+        <div class="h-72">
+          <div class="grid grid-cols-2">
+            <h3 class="font-bold text-xl leading-tight">Individual Premium</h3>
+            <div class="flex flex-col uppercase justify-center leading-6 text-right">
+              <p class="mt-1 font-bold text-lg">7,99 US$**</p>
+              <p class="m-0 font-normal text-xxs">Per month</p>
+            </div>
+          </div>
+          <ul class="list-disc px-4 mt-8 font-medium">
+            <li><p>2 premium accounts</p></li>
+            <li><p>Cancel anytime</p></li>
+          </ul>
+        </div>
+        <button class="text-black font-bold text-base bg-brand-orange py-4 w-full max-w-md rounded-full shadow-md transform hover:scale-105 transition duration-300 ease-in-out focus:outline outline-2 outline-white outline-offset-2 ">
+          Try for free for 2 months
+        </button>
+        <p class="text-center pt-4 text-white text-xs leading-4 font-normal">For couples living together. <a class="underline cursor-pointer hover:font-bold hover:text-white" href="#">Check the conditions.</a> *** + applicable taxes</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="w-full max-w-md rounded-xl border-4 border-solid border-brand-blue p-4 m-0">
+        <div class="h-72">
+          <div class="grid grid-cols-2">
+            <h3 class="font-bold text-xl leading-tight">Individual Premium</h3>
+            <div class="flex flex-col uppercase justify-center leading-6 text-right">
+              <p class="mt-1 font-bold text-lg">9,99 US$**</p>
+              <p class="m-0 font-normal text-xxs">Per month</p>
+            </div>
+          </div>
+          <ul class="list-disc px-4 mt-8 font-medium">
+            <li><p>Up to 6 Premium accounts</p></li>
+            <li><p>Control explicit content</p></li>
+            <li><p>Cancel anytime</p></li>
+          </ul>
+        </div>
+        <button class="text-black font-bold text-base bg-brand-blue py-4 w-full max-w-md rounded-full shadow-md transform hover:scale-105 transition duration-300 ease-in-out focus:outline outline-2 outline-white outline-offset-2 ">
+          Try for free for 2 months
+        </button>
+        <p class="text-center pt-4 text-white text-xs leading-4 font-normal">For up to 6 family members living together.<a class="underline cursor-pointer hover:font-bold hover:text-white" href="#">Check the conditions.</a> *** + applicable taxes.</p>
+      </div>
+    </div>
+  </section> 
+  <!-- SECTION ACOORDION-->
+  <section class="container py-12 mx-auto px-4 md:px-0">
+    <h2 class="text-center font-semibold text-2xl md:text-4xl md:leading-relaxed">You have any questions? </h2> 
+    <h3 class="text-center text-base">We have the answers.</h3>
+    <p class="text-center text-base"><a href="#" class="underline hover:no-underline">here</a> you can resolve even more doubts</p> 
+    <div class="accordion mt-6">
+      <!-- accordion item 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header bg-brand-dark-secondary text-white cursor-pointer text-xl font-bold py-4 px-16 mt-0.5 relative list-none outline-none">
+          How does the CocoLoco Premium trial work?
+          <span class="fas fa-chevron-down mr-2 float-end"></span>
+        </div>
+        <div class="accordion-content brand-dark-tertiary py-4 px-16 hidden">
+          <p>If you've never used Premium before, you may be eligible for a free trial (or at a reduced price).</p>
+          <p>Even though it's a trial, you'll need to provide valid payment information to sign up. We'll use this information to confirm your country or region and charge you if you choose to keep Premium after the offer ends.</p>
+          <p>We'll send you a reminder 7 days before the trial ends. Terms and restrictions vary by country.</p>
+        </div>
+      </div>
+      <!-- accordion item 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header bg-brand-dark-secondary text-white cursor-pointer text-xl font-bold py-4 px-16 mt-0.5 relative list-none outline-none">
+          How do I cancel my Premium plan?
+          <span class="fas fa-chevron-down mr-2 float-end"></span>
+        </div>
+        <div class="accordion-content brand-dark-tertiary py-4 px-16 hidden">
+          <p>You can easily cancel your Premium plan whenever you want online on your account page. You'll remain Premium until the next billing date, after which your account will switch to the free plan.</p>
+          <p>You won't lose your playlists or saved music, which you can listen to with ads on the free account.</p>
+        </div>
+      </div>
+      <!-- accordion item 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header bg-brand-dark-secondary text-white cursor-pointer text-xl font-bold py-4 px-16 mt-0.5 relative list-none outline-none">
+          How does the Premium Duo plan work?
+          <span class="fas fa-chevron-down mr-2 float-end"></span>
+        </div>
+        <div class="accordion-content brand-dark-tertiary py-4 px-16 hidden">
+          <p>Premium Duo is a plan for couples living together. It's cheaper than having two Individual Premium accounts. We'll ask for the address to confirm that both members live there. You can invite one person to the plan immediately after purchase. Each member will have an independent Premium account, so you can listen to content simultaneously. Each will have their own playlists and saved music. The other member of the account won't be able to see what you're listening to.</p>
+          <p><a href="#">Learn more about Premium Duo.</a></p>
+        </div>
+      </div>
+      <!-- accordion item 4 -->
+      <div class="accordion-item">
+        <div class="accordion-header bg-brand-dark-secondary text-white cursor-pointer text-xl font-bold py-4 px-16 mt-0.5 relative list-none outline-none">
+          How does the Premium Family plan work?
+          <span class="fas fa-chevron-down mr-2 float-end"></span>
+        </div>
+        <div class="accordion-content brand-dark-tertiary py-4 px-16 hidden">
+          <p>Premium Family is a plan for up to 6 family members living in the same household. It's cheaper than having an Individual Premium account for each person. We'll ask for the address to confirm that all members live there. You can invite people to the plan immediately after purchase. Each member will have an independent Premium account, so you can listen to content simultaneously. Each will have their own playlists and saved music. The other members of the account won't be able to see what you're listening to.</p>
+          <p><a href="#">Learn more about Premium Family.</a></p>
+        </div>
+      </div>
+      <!-- accordion item 5 -->
+      <div class="accordion-item">
+        <div class="accordion-header bg-brand-dark-secondary text-white cursor-pointer text-xl font-bold py-4 px-16 mt-0.5 relative list-none outline-none">
+          How much does CocoLoco Premium cost?
+          <span class="fas fa-chevron-down ml-2 float-end"></span>
+        </div>
+        <div class="accordion-content brand-dark-tertiary py-4 px-16 hidden">
+          <p>The prices of CocoLoco Premium vary depending on the Premium plan you choose: the CocoLoco Premium Individual plan costs $6.49 per month; Premium Duo, $7.99 per month; and Premium Family, $9.99 per month. If you've never used a Premium plan before, you may be eligible for a free trial (or at a reduced price). Terms and restrictions apply by country.</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <!-- SECTION MOBILE APPS-->
+  <section class="bg-brand-green text-black w-full grid grid-cols-1 mx-auto md:grid-cols-2 p-6 md:p-12">
+    <div class="mx-auto w-full md:w-1/2">
+      <div class="aspect-w-16 aspect-h-9">
+        <img src="images/listen.jpg" alt="Never stop listening" class="object-cover w-full h-full">
+      </div>
+    </div>
+    <div class="flex flex-col self-center text-center items-center md:items-start pt-6 md:pl-8">
+      <h2 class="text-4xl leading-7 font-bold mb-4">Never stop listening</h2>
+      <p class="text-xl leading-7 font-bold tracking-widest mb-8">CocoLoco is available on Web, iOS, and Android</p>
+      <ul class="flex gap-4">
+        <li>
+          <a href="#" class="text-black hover:text-white text-4xl leading-7"><i class="fab fa-google-play"></i></a>
+        </li>
+        <li>
+          <a href="#" class="text-black hover:text-white  text-4xl leading-7"><i class="fab fa-app-store"></i></a>
+        </li>
+      </ul>
+    </div>
+</section>
+  <!-- FOOTER-->
+  <footer class="py-12 container mx-auto px-4 md:px-0">
+    <!-- Footer block 1 -->
+    <div class="flex flex-wrap items-top gap-y-4">
+      <!-- Footer Logo -->
+      <div class="flex justify-center w-full md:w-1/4">
+        <a href="/">
+          <img class="w-20 h-20 text-white" src="images/cocoloco.svg" alt="Coco Logo">
+        </a>
+      </div>
+      <!-- Footer Nav -->
+      <div class="flex justify-center w-full md:w-1/2">
+        <dl class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="space-y-2">
+            <dt class="text-brand-gray text-xs font-extrabold leading-5 tracking-wider uppercase">Company</dt>
+            <dd><a href="#" class="text-base font-normal leading-6">About</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Employment</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">For the Record</a></dd>
+          </div>
+          <div class="space-y-2">
+            <dt class="text-brand-gray text-xs font-extrabold leading-5 tracking-wider uppercase">Communities</dt>
+            <dd><a href="#" class="text-base font-normal leading-6">For Artists</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Developers</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Advertising</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Investors</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Suppliers</a></dd>
+          </div>
+          <div class="space-y-2">
+            <dt class="text-brand-gray text-xs font-extrabold leading-5 tracking-wider uppercase">Useful Links</dt>
+            <dd><a href="#" class="text-base font-normal leading-6">Help</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Web Player</a></dd>
+            <dd><a href="#" class="text-base font-normal leading-6">Free Mobile App</a></dd>
+          </div>
+        </dl>
+      </div>
+      <!-- Footer Social Media Links -->
+      <div class="flex justify-center w-full  md:w-1/4">
+        <div class="flex space-x-4">
+          <a href="#" class="group h-11 w-11 lg:h-14 lg:w-14 flex justify-center items-center bg-black rounded-full">
+            <span><i class="fab fa-twitter text-white text-2xl group-hover:text-brand-green"></i></span>
+          </a>
+          <a href="#" class="group  h-11 w-11 lg:h-14 lg:w-14 flex justify-center items-center bg-black rounded-full">
+            <span><i class="fab fa-instagram text-white text-2xl group-hover:text-brand-green"></i></span>
+          </a>
+          <a href="#" class="group h-11 w-11 lg:h-14 lg:w-14 flex justify-center items-center bg-black rounded-full">
+            <span><i class="fab fa-facebook text-white text-2xl group-hover:text-brand-green"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer block 2 -->
+    <div class="flex flex-wrap justify-end items-top gap-y-4 px-4 mt-11">
+      <a href="#" class="secondary-link">
+        <i class="text-white fas fa-globe-americas pr-1"></i> USA
+      </a>
+    </div>
+    <!-- Footer block 3 -->
+    <div class="grid grid-cols-2 gap-y-4">
+      <ul class="px-4 flex flex-wrap gap-x-6 justify-end">
+        <li>
+          <a href="#" class="secondary-link">Legal</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-link">Security and Privacy Center</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-link">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-link">Cookies</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-link">About Ads</a>
+        </li>
+        <li>
+          <a href="#" class="secondary-link">Accessibility</a>
+        </li>
+      </ul>
+      <p class="text-xxs text-brand-gray text-right px-4">© 2024 CocoLoco</p>
+    </div>
+    
+  </footer>
+  <script src="bundle.js"></script>
+</body>
 </html>
