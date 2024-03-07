@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-image-url-small: url('../dist/images/hero-mobile.png');
+  --background-image-url-medium: url('../dist/images/hero-tablet.png');
+  --background-image-url-large: url('../dist/images/hero-desktop.png');
+}
+
 /* Mobile Menu */
 .hamburger {
   cursor: pointer;
@@ -51,7 +57,16 @@
 }
 
 /* Hero */
-
 .hero-section {
-  background-image: url('../dist/images/hero.jpg');
+  @apply bg-no-repeat bg-right-top bg-blend-overlay;
+  background-image: linear-gradient(to bottom, #222326, transparent), url('../dist/images/hero-mobile.png');
+
+  @media (min-width: 768px) {
+    background-image: linear-gradient(to bottom, #222326, transparent), url('../dist/images/hero-tablet.png');
+  }
+
+  @media (min-width: 1024px) {
+    background-image: linear-gradient(to bottom, #222326, transparent), url('../dist/images/hero-desktop.png');
+  }  
 }
+
